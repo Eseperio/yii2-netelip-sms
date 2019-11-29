@@ -1,0 +1,16 @@
+{
+    "name": "eseperio/yii2-netelip-sms",
+    "description": "Connection to Netelip SMS API",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "E.Alamo",
+            "email": "erosdelalamo@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
