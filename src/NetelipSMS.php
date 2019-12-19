@@ -88,12 +88,12 @@ class NetelipSms extends \yii\base\Component
     public function sms($phone, $message)
     {
         if (empty($this->from))
-            $from = Yii::$app->name;
+            $this->from = Yii::$app->name;
 
         $status = $this->request([
             'destination' => $phone,
             'message' => Yii::$app->formatter->asText($message),
-            'from' => StringHelper::truncate($from, $this->maxNameLength)
+            'from' => StringHelper::truncate($this->from, $this->maxNameLength)
         ]);
 
         return $this->responseCode == self::RESPONSE_CODE_SUCCESS;
